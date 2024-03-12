@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Left Side Info, Right Side Images</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kalnia&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        
+        .info {
+            width:100%;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        
+        
+        .symptoms{
+            font-size: 25px;
+            font-family: 'Kalnia', serif;
+
+        }
+        h1{
+            font-size:40px;
+            font-family: 'Kalnia', serif;
+        }
+        p{
+            font-size: 20px;
+            font-family: 'Ubuntu', sans-serif;
+            padding-top: 20px;
+            padding-left: 30px;
+            
+        }
+        ul li{
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 20px;
+            margin-left: 20px;
+        }
+.container{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+   background-color: rgb(206, 203, 203);
+    height:50px;
+}
+.info-left{
+    padding-left:50px;
+    
+}
+.info-right{
+    align-items: center;
+    text-align: right;
+    font-family:'Kalnia', serif;
+    margin-right: 30px;
+}
+.info-right ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding:10px 25px;
+    font-size: 20px;
+
+}
+.info-right ul li a{
+    color:rgb(14, 13, 13);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    
+}
+.info-right ul li a:hover{
+    color:rgb(243, 139, 234);
+    transition:.4s;
+}
+.content-left{
+    width:60%;
+}
+.image{
+    padding-right: 20px;
+    padding-top: 20px;
+}
+.home{
+    display:flex;
+    flex-direction: row;
+    align-items: right;
+    justify-content: space-between;
+    height:85vh;
+}
+.home-left{
+    width:50%;
+    
+    padding-left: 10px;
+}
+.home-right{
+   width:50%;
+    padding-left:200px;
+}
+.home-h1{
+    font-family:'Kalnia', serif;
+    font-size:20px;
+    padding-top: 20px;
+}
+</style>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+        <h1> DETOXIFY</h1>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="contact.html">CONTACT US</a>
+
+        </div>
+    </nav>
+           
+   
+    <marquee>Smoking is injurious to health; it is like buying death from your wealth.</marquee>
+    <div class="main">
+      <a href="health.html">Health Effects</a>
+      <a href="addiction.html">Addiction</a>
+      
+      <a href="treatment.html">Treatment</a>
+      <a href="faq.html">FAQ</a>
+         
+     </div>
+    <div class="container">
+        <div class="info-left">
+            <h1>Tobacco Addiction</h1>
+            </div>
+            <div class="info-right">
+            <ul>
+                <li><a href="https://www.healthline.com/health/addiction/tobacco">Symptoms</a></li>
+                <li><a href="https://60plus.smokefree.gov/support/stories-former-smokers">Testimonials</a></li>
+                
+            </ul>
+            </div>
+        </div>
+    </div>
+    <div class="home" id="home">
+        <div class="home-left">
+            <h1 class="home-h1">Tobacco and nicotine</h1>
+            <p>Tobacco is one of the most widely abused substances in the world. It is highly addictive. The Centers for Disease Control and Prevention estimates that tobacco causes 6 million deathsTrusted Source per year. This makes tobacco the leadingTrusted Source cause of preventable death.</p>
+            <p>Nicotine is the main addictive chemical in tobacco. It causes a rush of adrenaline when absorbed in the bloodstream or inhaled via cigarette smoke. Nicotine also triggers an increase in dopamine. This is sometimes referred to as the brain’s “happy” chemical.</p>
+            <p>Dopamine stimulates the area of the brain associated with pleasure and reward. Like any other drug, use of tobacco over time can cause a physical and psychological addiction. This is also true for smokeless forms of tobacco, such as snuff and chewing tobacco.</p>
+            <p>In 2011, about 70 percentTrusted Source of all adult smokers said they wanted to stop smoking.</p>
+        </div>
+        <div class="home-right">
+        <img class="image" src="images/sign.png" alt="my-logo" height="500px" width="500px">
+        </div>
+    </div>
+    
+
+</body>
+</html>

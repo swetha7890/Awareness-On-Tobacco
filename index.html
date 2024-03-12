@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Anti-Smoking Awareness</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+       
+        }
+
+        #image-container {
+            width: 90%;
+            margin: 20px auto;
+            position: relative;
+            margin-top: 3px;
+        }
+
+        .image {
+            display: none;
+            width: 80%;
+            height: 60%;
+            margin-right: 110px;
+        }
+
+        #prev, #next {
+            position: absolute;
+            top: 50%;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            transform: translateY(-50%);
+        }
+
+       
+        #prev, #next {
+            position: absolute;
+            top: 50%;
+            font-size: 130px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color:none;
+            color: #1b0433;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            transform: translateY(-50%);
+        }
+
+        #prev {
+            left: 10px;
+        }
+
+        #next {
+            right: 10px;
+        }
+        #prev, #next {
+            transform: translateY(-50%);
+            margin-top: 300px; 
+        }
+        body{
+            background-color: rgb(219, 219, 237);
+        }
+
+       
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+        <h1> DETOXIFY</h1>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="contact.html">CONTACT US</a>
+
+        </div>
+    </nav>
+           
+   
+    <marquee>Smoking is injurious to health; it is like buying death from your wealth.</marquee>
+    <div class="main">
+        <a href="health.html">Health Effects</a>
+         <a href="addiction.html">Addiction</a>
+         
+         <a href="treatment.html">Treatment</a>
+         <a href="faq.html">FAQ</a>
+     </div>
+    <div id="image-container">
+        <img class="image" src="images/image1 (1).jpg" alt="Tobacco Consequence 1">
+        <img class="image" src="images/image2.jpg" alt="Tobacco Consequence 2">
+        <img class="image" src="images/image3.jpg" alt="Tobacco Consequence 3">
+        <img class="image" src="images/image4.jpg" alt="Tobacco Consequence 4">
+        <img class="image" src="images/image5.jpg" alt="Tobacco Consequence 5">
+        <img class="image" src="images/image6.jpg" alt="Tobacco Consequence 6">
+        <div id="prev" onclick="changeImage(-1)"> &lt; </div>
+        <div id="next" onclick="changeImage(1)"> &gt; </div>
+    </div>
+    
+    
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.image');
+    
+        function showImage(index) {
+            images.forEach(image => image.style.display = 'none');
+            images[index].style.display = 'block';
+            currentIndex = index;
+        }
+    
+        function changeImage(offset) {
+            const newIndex = currentIndex + offset;
+            if (newIndex >= 0 && newIndex < images.length) {
+                showImage(newIndex);
+            }
+        }
+        function autoChange() {
+        const newIndex = (currentIndex + 1) % images.length;
+        showImage(newIndex);
+    }
+    
+    
+        showImage(currentIndex);
+        setInterval(autoChange, 5000);
+    </script>
+    
+
+    
+       
+</body>
+</html>
